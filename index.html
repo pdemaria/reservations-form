@@ -5,8 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vehicle(s)</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="wrapper">
+  <header class="vehicle-header">
+    <div class="container-fluid">
+    <nav role="navigation" class="d-flex flex-row">
+        <a href="">1</a>
+        <a href="" class="mr-auto">2 Vehicle(s)</a>
+        <span class="lnk-disabled">3</span>
+        <span class="lnk-disabled">4</span>
+        <span class="lnk-disabled">5</span>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+    <form action="" method="POST" id="vehicleSelection">
+
+      <div class="trip-summary" id="tripSummary">
+        <div class="container-fluid">
+          <h1 class="h4 text-uppercase">Trip</h1>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="h5">Vehicle</h2>
+            <p>Specific measurements based on your car type are required to provide accurate deck space availability</p>
+
+            <div class="option selected">
+              <h3 class="h6">Standard and Oversized</h3>
+
+            <p>Standard vehicles under 5,500 kg including cars, trucks, SUVs, vans, motorhomes and vehicles pulling trailers.</p>
+
+            <h4 class="h6">Vehicle Height</h4>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="vehicleTypeStandard" name="Vehicle Type" class="custom-control-input">
+                <label class="custom-control-label" for="vehicleTypeStandard">Under 7ft (2.13 m)</label>
+              </div>
+
+            <hr />
+            
+              <h4 class="h6">Vehicle Length</h4>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="vehicleLengthUnder" name="Vehicle Length" class="custom-control-input">
+                  <label class="custom-control-label" for="vehicleLengthUnder">Under 20ft (6.10 m)</label>
+                </div>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="vehicleLengthOver" name="Vehicle Length" class="custom-control-input">
+                  <label class="custom-control-label" for="vehicleLengthOver">Over 20ft (6.10 m)</label>
+                </div>
+
+            </div>
+
+            <div class="option">
+              <h3 class="h6">Motorcycle</h3>
+            </div>
+
+            <div class="option">
+              <h3 class="h6">Over 5,500 kg GVW</h3>
+
+            </div>
+
+            <div class="option">
+              <h3 class="h6">Bus</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+  </main>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
