@@ -37,27 +37,37 @@
             <p>Specific measurements based on your car type are required to provide accurate deck space availability</p>
 
             <div class="option selected">
-              <h3 class="h6">Standard and Oversized</h3>
-
-            <p>Standard vehicles under 5,500 kg including cars, trucks, SUVs, vans, motorhomes and vehicles pulling trailers.</p>
-
-            <h4 class="h6">Vehicle Height</h4>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="vehicleTypeStandard" name="Vehicle Type" class="custom-control-input">
-                <label class="custom-control-label" for="vehicleTypeStandard">Under 7ft (2.13 m)</label>
+              <div class="option-header">
+                <h3 class="h6" id="optionStandardHeading">Standard and Oversized</h3>
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#optionStandard" aria-expanded="true" aria-controls="optionStandard">
+                  +
+                </button>
               </div>
+              <div class="option-content" id="optionStandard" class="collapse show" aria-labelledby="optionStandardHeading" data-parent="#vehicleSelection">
 
-            <hr />
 
-              <h4 class="h6">Vehicle Length</h4>
+              <p>Standard vehicles under 5,500 kg including cars, trucks, SUVs, vans, motorhomes and vehicles pulling trailers.</p>
+
+              <h4 class="h6">Vehicle Height <a href="#" data-toggle="tooltip" data-placement="top" title="Some words on the topic of vehicle height" ><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">Vehicle Height Info</span></a></h4>
+
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="vehicleLengthUnder" name="Vehicle Length" class="custom-control-input">
-                  <label class="custom-control-label" for="vehicleLengthUnder">Under 20ft (6.10 m)</label>
+                  <input type="radio" id="vehicleTypeStandard" name="Vehicle Type" class="custom-control-input">
+                  <label class="custom-control-label" for="vehicleTypeStandard">Under 7ft (2.13 m)</label>
                 </div>
-                <div class="custom-control custom-radio">
-                  <input type="radio" id="vehicleLengthOver" name="Vehicle Length" class="custom-control-input">
-                  <label class="custom-control-label" for="vehicleLengthOver">Over 20ft (6.10 m)</label>
-                </div>
+
+              <hr />
+
+                <h4 class="h6">Vehicle Length <a href="#" data-toggle="tooltip" data-placement="top" title="Some words on the topic of vehicle length" ><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">Vehicle Length Info</span></a></h4>
+
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="vehicleLengthUnder" name="Vehicle Length" class="custom-control-input">
+                    <label class="custom-control-label" for="vehicleLengthUnder">Under 20ft (6.10 m)</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="vehicleLengthOver" name="Vehicle Length" class="custom-control-input">
+                    <label class="custom-control-label" for="vehicleLengthOver">Over 20ft (6.10 m)</label>
+                  </div>
+          </div>
 
             </div>
 
@@ -86,6 +96,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 
 
 </body>
