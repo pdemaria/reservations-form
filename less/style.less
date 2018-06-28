@@ -35,18 +35,43 @@ body {
   &.selected,&:hover,&:focus {
     box-shadow: 0px 0px 15px @dark-dove-border;
   }
-  .option-header:extend(.d-flex) {
-
-  }
 
   // extend custom controls
-  .custom-control.custom-radio {
-    background-color: @option-grey;
+  .custom-control {
     margin-bottom: 0.25rem;
     padding: 1rem 1rem 1rem 2rem;
 
+    &.custom-radio {
+      background-color: @option-grey;
+
     .custom-control-label {
       font-weight: 600;
+      text-indent: 1.5rem;
+      &:after {
+        background-size: 68% 68%;
+        top: 0rem;
+        left: -1.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      &:before {
+        background-color: @white;
+        border: 0.5px solid @dark-grey;
+        top: 0rem;
+        left: -1.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .custom-control-input:checked ~ .custom-control-label {
+      &:after {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -5 10 10'%3E%3Ccircle r='5' fill='%234a90e2'/%3E%3C/svg%3E");
+      }
+      &:before {
+        background-color: @white;
+        border: 0.5px solid @dark-grey;
+      }
+    }
     }
   }
 

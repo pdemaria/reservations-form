@@ -13,3 +13,6 @@ A simple html template (using Bootstrap and LESS) for prototyping the applicatio
     - Truck (Over 5,000kg GVW)
     - Bus
 - Confirmation of vehicle as return-trip vehicle
+
+## Todos:
+- [ ] Convert vehicle bitmap bits to SVG images
