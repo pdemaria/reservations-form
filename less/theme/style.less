@@ -1,0 +1,196 @@
+@import "../../node_modules/bootstrap-less-port/less/bootstrap";
+@import "_variables";
+
+// Basics, wrappers
+body {
+  background-color: @gray-dark;
+}
+
+.wrapper {
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: @white;
+}
+
+// Header blocks
+.header {
+  #make-row();
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.5rem 0.35rem;
+  margin-right: 0;
+  margin-left: 0;
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 0;
+  }
+  .option-icon {
+    font-size: 2rem;
+    color: @gray-icons;
+    font-weight: 200;
+  }
+  a,
+  .btn-link {
+    color: @gray-icons;
+    :hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// Trip Summary displays departure/return dates and ports
+.trip-summary {
+  background-color: @dove;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+// Option block, there could be many of these, they should generally contain a label + radio or checkbox
+.option {
+  border: 1px solid @dove-borders;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  &.selected,
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 15px @dove-borders;
+  }
+  &.option-clean {
+    border: 0;
+    &.selected,
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  [data-toggle] {
+    color: inherit;
+  }
+
+  // Custom controls extends bootstrap's <.custom-control/>
+  .custom-control {
+    margin-bottom: 0.25rem;
+    padding: 1rem 1rem 1rem 2rem;
+
+    &.custom-checkbox {
+      .custom-control-label {
+        text-indent: 1.5rem;
+
+        &:after {
+          border-radius: 0;
+          background-color: transparent;
+          background-image: url("data:image/svg+xml;utf8,<svg data-name='checkbox' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><rect x='0.5' y='0.5' width='24' height='24' style='fill:#fff'/><path d='M24,1V24H1V1H24m1-1H0V25H25V0Z' style='fill:#979797'/></svg>");
+          background-size: 100% 100%;
+          top: 0rem;
+          left: -1.75rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        &:before {
+          border-radius: 0;
+          background-color: transparent;
+          top: 0rem;
+          left: -1.75rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+      .custom-control-input:checked ~ .custom-control-label {
+        &:after {
+          background-image: url("data:image/svg+xml;charset=utf8,<svg data-name='checkbox' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25'><rect x='0.5' y='0.5' width='24' height='24' style='fill:#fff'/><path d='M24,1V24H1V1H24m1-1H0V25H25V0Z' style='fill:#979797'/><rect x='3' y='3' width='19' height='19' style='fill:#4a90e2'/></svg>");
+          background-size: 100% 100%;
+        }
+      }
+    }
+
+    &.custom-radio {
+      background-color: @gray-options;
+
+      .custom-control-label {
+        font-weight: 600;
+        text-indent: 1.5rem;
+        &:after {
+          background-size: 68% 68%;
+          top: 0rem;
+          left: -1.75rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        &:before {
+          background-color: @white;
+          border: 0.5px solid @gray-dark;
+          top: 0rem;
+          left: -1.75rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+      .custom-control-input:checked ~ .custom-control-label {
+        &:after {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -5 10 10'%3E%3Ccircle r='5' fill='%234a90e2'/%3E%3C/svg%3E");
+        }
+        &:before {
+          background-color: @white;
+          border: 0.5px solid @gray-dark;
+        }
+      }
+    }
+  }
+}
+
+// Pagination extends bootstrap's <.pagination/>
+.pager-reservation {
+  .row;
+  margin: 0;
+  .page-item {
+    .page-link {
+      width: auto;
+      border: 0;
+      border-radius: 0;
+      background-color: transparent;
+      color: transparent;
+      line-height: 1;
+      padding: 1rem 0.25rem;
+      .page-text {
+        top: 50%;
+        transform: translate(0, -50%);
+        display: inline-block;
+        position: relative;
+      }
+      .fa-circle {
+        border: 1px solid #ccc;
+        border-radius: 50%;
+      }
+      .fa-layers-text {
+        color: @black;
+      }
+    }
+    &.active {
+      flex: 1 1 auto;
+    }
+    &.active .page-link {
+      color: @gray-dark;
+      .fa-layers-text {
+        color: @white;
+      }
+      .fa-circle {
+        border: none;
+        border-radius: 0;
+      }
+    }
+    &.complete .page-link {
+      color: @gray-dark;
+      .fa-layers-text {
+        color: @white;
+      }
+      .fa-circle {
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+}

@@ -11,13 +11,32 @@
 <div class="wrapper">
   <header class="vehicle-header">
     <div class="container-fluid">
-    <nav role="navigation" class="d-flex flex-row">
-        <a href="">1</a>
-        <a href="" class="mr-auto">2 Vehicle(s)</a>
-        <span class="lnk-disabled">3</span>
-        <span class="lnk-disabled">4</span>
-        <span class="lnk-disabled">5</span>
-    </nav>
+
+      <nav aria-label="Reservation navigation">
+        <ul class="pagination pager-reservation">
+          <li class="page-item complete"><a class="page-link" href="#">  <span class="fa-stack fa-sm">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="">1</span>
+      </span></a></li>
+          <li class="page-item active"><a class="page-link" href="#">  <span class="fa-stack fa-sm">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="">2</span>
+      </span> <span class="page-text">Vehicle(s) <span class="sr-only">(current)</span></span></a></li>
+          <li class="page-item"><a class="page-link" href="#">  <span class="fa-stack fa-sm">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="">3</span>
+      </span></a></li>
+          <li class="page-item"><a class="page-link" href="#">  <span class="fa-stack fa-sm">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="">4</span>
+      </span></a></li>
+          <li class="page-item"><a class="page-link" href="#">  <span class="fa-stack fa-sm">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <span class="fa-layers-text fa-inverse" data-fa-transform="">5</span>
+      </span></a></li>
+        </ul>
+      </nav>
+
     </div>
   </header>
 
@@ -26,33 +45,53 @@
 
       <div class="trip-summary" id="tripSummary">
         <div class="container-fluid">
-          <h1 class="h4 text-uppercase">Trip</h1>
+
+          <div class="header">
+              <h1 class="h4">Trip </h1>
+              <button type="button" class="btn btn-link js-trip-edit"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="sr-only">Click to edit your trip</span></button>
+          </div>
+
+          <div class="row text-center align-items-center">
+            <div class="col-sm-5">
+              <h2><small><span class="sr-only">Departing </span>WED, JUN 27</small> <br />
+                Vancouver <br />
+                <small>(Tsawwassen)</small></h2>
+            </div>
+            <div class="col-sm-2"><i class="fas fa-exchange-alt" aria-hidden="true"></i>
+
+</div>
+            <div class="col-sm-5">
+              <h2><small><span class="sr-only">Returning </span>SUN, JUN 30</small> <br />
+                Victoria <br />
+                <small>(Swartz Bay)</small></h2>
+            </div></div>
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container-fluid py-4">
         <div class="row">
           <div class="col-12">
             <h2 class="h5">Vehicle</h2>
             <p>Specific measurements based on your car type are required to provide accurate deck space availability</p>
 
             <div class="option selected">
-              <div class="option-header">
-                <h3 class="h6" id="optionStandardHeading">Standard and Oversized</h3>
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#optionStandard" aria-expanded="true" aria-controls="optionStandard">
-                  +
-                </button>
+              <div class="header" data-toggle="collapse" data-target="#optionStandard" aria-expanded="true" aria-controls="optionStandard">
+                <h3 class="h6" id="optionStandardHeading"> <img src="./images/icon-car.png" alt="Standard and Oversized"> Standard and Oversized </h3> <span class="option-icon">-</span>
+
               </div>
               <div class="option-content" id="optionStandard" class="collapse show" aria-labelledby="optionStandardHeading" data-parent="#vehicleSelection">
 
-
-              <p>Standard vehicles under 5,500 kg including cars, trucks, SUVs, vans, motorhomes and vehicles pulling trailers.</p>
+                <p>
+                  Standard vehicles under 5,500 kg including cars, trucks, SUVs, vans,
+                  motorhomes and vehicles pulling trailers.
+                </p>
 
               <h4 class="h6">Vehicle Height <a href="#" data-toggle="tooltip" data-placement="top" title="Some words on the topic of vehicle height" ><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">Vehicle Height Info</span></a></h4>
 
                 <div class="custom-control custom-radio">
-                  <input type="radio" id="vehicleTypeStandard" name="Vehicle Type" class="custom-control-input">
+                  <input type="radio" id="vehicleTypeStandard" name="Vehicle Type" class="custom-control-input" checked="true" autocomplete="off">
                   <label class="custom-control-label" for="vehicleTypeStandard">Under 7ft (2.13 m)</label>
+                  <img src="./images/icon-standard.png" alt="Standard vehicles Under 7ft (2.13 m) in height" class="img-fluid my-2">
                 </div>
 
               <hr />
@@ -60,28 +99,80 @@
                 <h4 class="h6">Vehicle Length <a href="#" data-toggle="tooltip" data-placement="top" title="Some words on the topic of vehicle length" ><i class="fas fa-info-circle" aria-hidden="true"></i><span class="sr-only">Vehicle Length Info</span></a></h4>
 
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="vehicleLengthUnder" name="Vehicle Length" class="custom-control-input">
+                    <input type="radio" id="vehicleLengthUnder" name="Vehicle Length" class="custom-control-input" autocomplete="off">
                     <label class="custom-control-label" for="vehicleLengthUnder">Under 20ft (6.10 m)</label>
+                    <img src="./images/icon-standard.png" alt="Standard vehicles under 20ft (6.10 m) in length" class="img-fluid my-2">
                   </div>
                   <div class="custom-control custom-radio">
-                    <input type="radio" id="vehicleLengthOver" name="Vehicle Length" class="custom-control-input">
+                    <input type="radio" id="vehicleLengthOver" name="Vehicle Length" class="custom-control-input" autocomplete="off">
                     <label class="custom-control-label" for="vehicleLengthOver">Over 20ft (6.10 m)</label>
+                    <img src="./images/icon-oversize.png" alt="Standard vehicles over 20ft (6.10 m) in length" class="img-fluid my-2">
+                  </div>
+
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="Carrying dangerous goods" id="carryingDangerousGoods" value="Yes" autocomplete="off">
+                    <label class="custom-control-label" for="carryingDangerousGoods">Carrying dangerous goods</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" name="Carrying livestock" id="carryingLivestock" value="Yes" autocomplete="off">
+                    <label class="custom-control-label" for="carryingLivestock">Carrying livestock</label>
                   </div>
           </div>
 
             </div>
 
             <div class="option">
-              <h3 class="h6">Motorcycle</h3>
+              <div class="header" data-toggle="collapse" data-target="#optionMotorcycle" aria-expanded="true" aria-controls="optionMotorcycle" id="optHeadingMotorcycle">
+                 <h3 class="h6"><img src="./images/icon-motorcycle.png" alt="Standard and Oversized"> Motorcycle </h3> <span class="option-icon">+</span>
+              </div>
+
+              <div class="option-content collapse" id="optionMotorcycle" aria-labelledby="optHeadingMotorcycle" data-parent="#vehicleSelection">
+                <p>Motorcycles and scooters</p>
+              </div>
             </div>
 
             <div class="option">
-              <h3 class="h6">Over 5,500 kg GVW</h3>
+              <div class="header" data-toggle="collapse" data-target="#optionOverWeight" aria-expanded="true" aria-controls="optionOverWeight" id="optHeadingOver">
+               <h3 class="h6"><img src="./images/icon-truck.png" alt="Standard and Oversized"> Over 5,500 kg <abbr title="Gross Vehicle Weight">GVW</abbr></h3> <span class="option-icon">+</span>
+              </div>
+
+              <div class="option-content collapse" id="optionOverWeight" aria-labelledby="optHeadingOver" data-parent="#vehicleSelection">
+                <p>Trucks and large transport vehicles with and without trailers over 5,500 kg <abbr title="Gross Vehicle Weight">GVW</abbr>  </p>
+              </div>
 
             </div>
 
             <div class="option">
-              <h3 class="h6">Bus</h3>
+              <div class="header" data-toggle="collapse" data-target="#optionBus" aria-expanded="true" aria-controls="optionBus" id="optHeadingBus">
+                <h3 class="h6"><img src="./images/icon-bus.png" alt="Standard and Oversized"> Bus</h3> <span class="option-icon">+</span>
+              </div>
+
+              <div class="option-content collapse" id="optionBus" aria-labelledby="optHeadingBus" data-parent="#vehicleSelection">
+                <p>Vehicles with 6 or more passengers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="vehicle-confirmation">
+          <div class="row">
+            <div class="col-12">
+              <div class="option option-clean">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="returnVehicleAlternate" name="Different Return Vehicle" value="Yes" autocomplete="off">
+                <label class="custom-control-label" for="returnVehicleAlternate">Returning with a different vehicle</label>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+
+
+
+            <button class="btn btn-secondary btn-lg btn-block" type="submit">Confirm And Find Sailing</button>
+
             </div>
           </div>
         </div>
@@ -90,6 +181,7 @@
 
     </form>
   </main>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
